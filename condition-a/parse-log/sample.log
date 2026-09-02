@@ -1,0 +1,19 @@
+2026-09-01 08:00:12 INFO  [main] Application started successfully
+2026-09-01 08:00:13 INFO  [db] Connected to PostgreSQL 15.3
+2026-09-01 08:01:45 WARN  [auth] Token refresh took 3200ms (threshold: 2000ms)
+2026-09-01 08:02:11 ERROR [api] NullPointerError: user.profile is undefined at /src/handlers/user.py:42
+2026-09-01 08:02:11 ERROR [api] Request POST /api/users/123/profile failed with status 500
+2026-09-01 08:03:00 INFO  [scheduler] Cron job 'cleanup' started
+2026-09-01 08:03:02 INFO  [scheduler] Cron job 'cleanup' completed in 1.8s
+2026-09-01 08:05:30 WARN  [db] Slow query detected: SELECT * FROM orders WHERE status='pending' (4500ms)
+2026-09-01 08:06:01 ERROR [worker] TimeoutError: Task 'send_email_batch' exceeded 30s limit
+2026-09-01 08:06:01 ERROR [worker] Retrying task 'send_email_batch' (attempt 2/3)
+2026-09-01 08:06:35 INFO  [worker] Task 'send_email_batch' completed on retry
+2026-09-01 08:10:00 INFO  [api] Health check passed
+2026-09-01 08:15:22 ERROR [auth] InvalidTokenError: JWT signature verification failed for user_id=456
+2026-09-01 08:15:22 WARN  [auth] Blocked request from IP 192.168.1.100 (invalid token)
+2026-09-01 08:20:00 INFO  [metrics] CPU: 45%, Memory: 62%, Disk: 38%
+2026-09-01 08:25:17 ERROR [db] ConnectionError: Lost connection to replica-2 at 10.0.1.52:5432
+2026-09-01 08:25:18 WARN  [db] Failover to replica-3 initiated
+2026-09-01 08:25:19 INFO  [db] Failover complete. Now connected to replica-3
+2026-09-01 08:30:00 INFO  [api] Requests in last 30min: 12,847 (avg latency: 89ms)
